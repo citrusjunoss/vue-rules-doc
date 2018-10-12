@@ -3,8 +3,6 @@
 
   - [省市区选择插件](zh-cn/citypicker.md)
   - [图片上传插件](zh-cn/uploader.md)
-  - [Custom navbar](custom-navbar.md)
-  - [Cover page](cover.md)
 
 - 商标模块
 
