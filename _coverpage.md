@@ -1,4 +1,4 @@
-![logo](zh-cn/images/assets/logo.git)
+![logo](zh-cn/images/assets/logo.gif)
 
 # IPS DOC
 
