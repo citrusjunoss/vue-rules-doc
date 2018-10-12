@@ -1,4 +1,4 @@
-![logo](zh-cn/images/assets/logo.gif)
+![logo](zh-cn/images/assets/logo.png)
 
 # IPS DOC
 
@@ -9,4 +9,4 @@
 * Not build static html files
 
 [GitLab](http://192.168.16.211:88/root/erp-vue)
-[Get Started](#/zh-cn/guide)
+[Get Started](zh-cn/guide)
