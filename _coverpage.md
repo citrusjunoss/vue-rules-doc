@@ -1,12 +1,12 @@
-![logo](_media/icon.svg)
+![logo](zh-cn/images/assets/logp.git)
 
-# docsify
+# IPS DOC
 
-> A magical documentation site generator.
+> 知云网络科技IPS前端组件规范管理文档
 
 * Simple and lightweight (~12kb gzipped)
 * Multiple themes
 * Not build static html files
 
-[GitHub](https://github.com/docsifyjs/docsify/)
-[Get Started](#quick-start)
+[GitLab](http://192.168.16.211:88/root/erp-vue)
+[Get Started](#guide)
