@@ -1,66 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="Description" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" />
+    <script src="//unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/docsify-demo-box-vue@v1.1.0/dist/docsify-demo-box-vue.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
+    <link rel="manifest" href="manifest.json" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
-  <script src="//unpkg.com/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-  <script src="https://unpkg.com/docsify-demo-box-vue@v1.1.0/dist/docsify-demo-box-vue.min.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
-  <link rel="manifest" href="manifest.json" />
-</head>
-
-<body>
-  <div id="app"></div>
+  <body>
+    <div id="app"></div>
+    <script>
+      var jsResources =
+        '<scr' + 'ipt src="//unpkg.com/vue/dist/vue.js"></scr' + 'ipt>';
+      var cssResources =
+        '@import url("//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");';
+      var bootCode = 'var globalVariable = "leon"';
+      var globalVariable = 'leon';
+      window.$docsify = {
+        name: '企知道Vue规范(原IPS组件库)',
+        repo: 'https://github.com/citrusjunoss/vue-rules-doc', // 仓库地址
+        loadSidebar: true, // 侧边栏
+        coverpage: true, // 封面
+        loadNavbar: true, // 导航栏
+        autoHeader: true,
+        subMaxLevel: 2,
+        // 完整配置参数
+        search: {
+          maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+          paths: 'auto', // or 'auto'
+          placeholder: 'Type to search',
+          // 支持本地化
+          placeholder: {
+            '/zh-cn/': '搜索',
+            '/': 'Type to search'
+          },
+          noData: 'No Results!',
+          // 支持本地化
+          noData: {
+            '/zh-cn/': '找不到结果',
+            '/': 'No Results'
+          },
+          // 搜索标题的最大程级, 1 - 6
+          depth: 6
+        },
+        plugins: [DemoBoxVue.create(jsResources, cssResources, bootCode)]
+      };
+    </script>
+    <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+    <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+  </body>
   <script>
-    var jsResources = '<scr' + 'ipt src="//unpkg.com/vue/dist/vue.js"></scr' + 'ipt>'
-    var cssResources = '@import url("//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");'
-    var bootCode = 'var globalVariable = "leon"'
-    var globalVariable = "leon"
-    window.$docsify = {
-      name: 'IPS组件库',
-      repo: 'http://192.168.16.211:88/root/erp-vue', // 仓库地址
-      loadSidebar: true, // 侧边栏
-      coverpage: true, // 封面
-      loadNavbar: true, // 导航栏
-      autoHeader: true,
-      subMaxLevel: 2,
-      // 完整配置参数
-      search: {
-        maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-        paths: 'auto', // or 'auto'
-        placeholder: 'Type to search',
-        // 支持本地化
-        placeholder: {
-          '/zh-cn/': '搜索',
-          '/': 'Type to search'
-        },
-        noData: 'No Results!',
-        // 支持本地化
-        noData: {
-          '/zh-cn/': '找不到结果',
-          '/': 'No Results'
-        },
-        // 搜索标题的最大程级, 1 - 6
-        depth: 6
-      },
-      plugins: [
-        DemoBoxVue.create(jsResources, cssResources, bootCode)
-      ]
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js');
     }
   </script>
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
-</body>
-<script>
-  if (typeof navigator.serviceWorker !== 'undefined') {
-    navigator.serviceWorker.register('sw.js')
-  }
-</script>
-
 </html>
